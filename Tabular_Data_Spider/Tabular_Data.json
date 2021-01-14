@@ -1,0 +1,90 @@
+[
+  {
+    "Year": "2008",
+    "Magic Kingdom": "17,063,000",
+    "Epcot": "10,935,000",
+    "Disney Hollywood Studio": "9,608,000",
+    "Disney Animal Kingdom": "9,540,000",
+    "Overall": "47,146,000"
+  },
+  {
+    "Year": "2009",
+    "Magic Kingdom": "17,233,000",
+    "Epcot": "10,990,000",
+    "Disney Hollywood Studio": "9,700,000",
+    "Disney Animal Kingdom": "9,590,000",
+    "Overall": "47,513,000"
+  },
+  {
+    "Year": "2010",
+    "Magic Kingdom": "16,972,000",
+    "Epcot": "10,825,000",
+    "Disney Hollywood Studio": "9,603,000",
+    "Disney Animal Kingdom": "9,686,000",
+    "Overall": "47,086,000"
+  },
+  {
+    "Year": "2011",
+    "Magic Kingdom": "17,142,000",
+    "Epcot": "10,826,000",
+    "Disney Hollywood Studio": "9,699,000",
+    "Disney Animal Kingdom": "9,783,000",
+    "Overall": "47,450,000"
+  },
+  {
+    "Year": "2012",
+    "Magic Kingdom": "17,536,000",
+    "Epcot": "11,063,000",
+    "Disney Hollywood Studio": "9,912,000",
+    "Disney Animal Kingdom": "9,998,000",
+    "Overall": "48,509,000"
+  },
+  {
+    "Year": "2013",
+    "Magic Kingdom": "18,588,000",
+    "Epcot": "11,229,000",
+    "Disney Hollywood Studio": "10,110,000",
+    "Disney Animal Kingdom": "10,198,000",
+    "Overall": "50,125,000"
+  },
+  {
+    "Year": "2014",
+    "Magic Kingdom": "19,332,000",
+    "Epcot": "11,454,000",
+    "Disney Hollywood Studio": "10,312,000",
+    "Disney Animal Kingdom": "10,402,000",
+    "Overall": "51,500,000"
+  },
+  {
+    "Year": "2015",
+    "Magic Kingdom": "20,492,000",
+    "Epcot": "11,798,000",
+    "Disney Hollywood Studio": "10,828,000",
+    "Disney Animal Kingdom": "10,922,000",
+    "Overall": "54,040,000"
+  },
+  {
+    "Year": "2016",
+    "Magic Kingdom": "20,395,000",
+    "Epcot": "11,712,000",
+    "Disney Hollywood Studio": "10,776,000",
+    "Disney Animal Kingdom": "10,844,000",
+    "Overall": "53,727,000"
+  },
+  {
+    "Year": "2017",
+    "Magic Kingdom": "20,450,000",
+    "Epcot": "12,200,000",
+    "Disney Hollywood Studio": "10,722,000",
+    "Disney Animal Kingdom": "12,500,000",
+    "Overall": "55,872,000"
+  },
+  {
+    "Year": "2018",
+    "Magic Kingdom": "20,859,000",
+    "Epcot": "12,444,000",
+    "Disney Hollywood Studio": "11,258,000",
+    "Disney Animal Kingdom": "13,750,000",
+    "Overall": "58,311,000"
+  }
+]

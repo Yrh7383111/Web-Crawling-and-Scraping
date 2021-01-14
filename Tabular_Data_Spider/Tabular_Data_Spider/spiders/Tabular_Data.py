@@ -13,6 +13,12 @@ class TabularDataSpider(scrapy.Spider):
         tbody = table.xpath('./tbody')
         trs = tbody.xpath('./tr')
 
-        for tr in trs:
-            row = tr.xpath('./td/text()').extract()
-            print(*row)
+        for i in range(len(trs)):
+            if i != 0:
+                row = trs[i].xpath('./td/text()').extract()
+                yield {'Year': row[0],
+                       'Magic Kingdom': row[1],
+                       'Epcot': row[2],
+                       'Disney Hollywood Studio': row[3],
+                       'Disney Animal Kingdom': row[4],
+                       'Overall': row[5]}
