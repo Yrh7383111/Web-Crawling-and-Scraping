@@ -6,8 +6,8 @@ from scrapy.utils.response import open_in_browser
 
 class LoginSpider(Spider):
     name = 'Login'
-    allowed_domains = ['quotes.toscrape.com']
-    start_urls = ['http://quotes.toscrape.com/login']
+    allowed_domains = ['quotes.toscrape.com/']
+    start_urls = ['http://quotes.toscrape.com/login/']
 
 
     def parse(self, response):

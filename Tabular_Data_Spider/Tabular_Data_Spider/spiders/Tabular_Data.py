@@ -1,8 +1,8 @@
-import scrapy
+from scrapy import Spider
 
 
 
-class TabularDataSpider(scrapy.Spider):
+class TabularDataSpider(Spider):
     name = 'Tabular_Data'
     allowed_domains = ['en.wikipedia.org']
     start_urls = ['https://en.wikipedia.org/wiki/Walt_Disney_World#Timeline']

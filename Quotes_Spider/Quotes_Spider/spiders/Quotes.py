@@ -1,10 +1,10 @@
-import scrapy
+from scrapy import Spider, Request
 
 
 
-class QuotesSpider(scrapy.Spider):
+class QuotesSpider(Spider):
     name = 'Quotes'
-    allowed_domains = ['quotes.toscrape.com']
+    allowed_domains = ['quotes.toscrape.com/']
     start_urls = ['https://quotes.toscrape.com/']
 
 
@@ -30,5 +30,5 @@ class QuotesSpider(scrapy.Spider):
 
         relative_next_page_url = response.xpath('//li[@class="next"]/a/@href').extract_first()
         absolute_next_page_url = response.urljoin(relative_next_page_url)
-        # Do not save value in memory - better memory efficiency
-        yield scrapy.Request(url=absolute_next_page_url, callback=self.parse)
+        # yield - Do not save value in memory - better memory efficiency
+        yield Request(url=absolute_next_page_url, callback=self.parse)
