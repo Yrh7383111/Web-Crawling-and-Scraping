@@ -1,4 +1,4 @@
-# Scrapy settings for Login_Spider project
+# Scrapy settings for Link_Spider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,10 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Login_Spider'
+BOT_NAME = 'Link_Spider'
 
-SPIDER_MODULES = ['Login_Spider.spiders']
-NEWSPIDER_MODULE = 'Login_Spider.spiders'
+SPIDER_MODULES = ['Link_Spider.spiders']
+NEWSPIDER_MODULE = 'Link_Spider.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
@@ -44,13 +44,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'Login_Spider.middlewares.LoginSpiderSpiderMiddleware': 543,
+#    'Link_Spider.middlewares.LinkSpiderSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'Login_Spider.middlewares.LoginSpiderDownloaderMiddleware': 543,
+#    'Link_Spider.middlewares.LinkSpiderDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -62,7 +62,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'Login_Spider.pipelines.LoginSpiderPipeline': 300,
+#    'Link_Spider.pipelines.LinkSpiderPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
