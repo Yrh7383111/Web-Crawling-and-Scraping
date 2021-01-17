@@ -41,10 +41,16 @@ def parse_book(response):
 
 
 class BooksSpider(Spider):
+    # Private
     name = 'Books'
     allowed_domains = ['books.toscrape.com']
-    start_urls = ['http://books.toscrape.com/']
+    start_urls = ['https://books.toscrape.com/']
 
+    # # Constructor
+    # def __init__(self, url):
+    #     self.start_urls.append(url)
+
+    # Parsing
     def parse(self, response):
         books = response.xpath('//article[@class="product_pod"]')
         # Check each book
