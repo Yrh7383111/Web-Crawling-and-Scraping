@@ -1,3 +1,7 @@
+import csv
+import glob
+import os
+import pymysql
 from scrapy import Spider
 from scrapy.http import Request
 
@@ -30,11 +34,15 @@ def parse_book(response):
         header_list.append(header)
         data_list.append(data)
 
+    # result = {'Title': title,
+    #           'Price': price,
+    #           'Rating': rating,
+    #           'Img URL': img_url,
+    #           'Description': description}
     result = {'Title': title,
               'Price': price,
               'Rating': rating,
-              'Img URL': img_url,
-              'Description': description}
+              'Img URL': img_url}
     for header, data in zip(header_list, data_list):
         result[header] = data
     yield result
@@ -45,6 +53,7 @@ class BooksSpider(Spider):
     name = 'Books'
     allowed_domains = ['books.toscrape.com']
     start_urls = ['https://books.toscrape.com/']
+
 
     # # Constructor
     # def __init__(self, url):
@@ -63,3 +72,18 @@ class BooksSpider(Spider):
         relative_next_page_link = response.xpath('//a[contains(text(),"next")]/@href').extract_first()
         next_page_link = response.urljoin(relative_next_page_link)
         yield Request(url=next_page_link, callback=self.parse)
+
+    # After parsing
+    def close(self, reason):
+        books_csv = max(glob.iglob('Books.csv'), key=os.path.getctime)
+        books_data = csv.reader(open(books_csv))
+        books_db = pymysql.connect(user='root', password='Yrh@9695500', host='localhost', db='books_db')
+        cursor = books_db.cursor()
+
+        next(books_data)
+        for row in books_data:
+            cursor.execute('INSERT IGNORE INTO books(title, price, rating, img_url, upc, product_type, tax_price, no_tax_price, tax, availability, reviews) '
+                           'VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', row)
+
+        books_db.commit()
+        cursor.close()
