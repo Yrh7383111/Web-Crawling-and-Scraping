@@ -54,13 +54,8 @@ class BooksSpider(Spider):
     allowed_domains = ['books.toscrape.com']
     start_urls = ['https://books.toscrape.com/']
 
-
-    # # Constructor
-    # def __init__(self, url):
-    #     self.start_urls.append(url)
-
     # Parsing
-    def parse(self, response):
+    def parse(self, response, **kwargs):
         books = response.xpath('//article[@class="product_pod"]')
         # Check each book
         for book in books:
@@ -82,8 +77,9 @@ class BooksSpider(Spider):
 
         next(books_data)
         for row in books_data:
-            cursor.execute('INSERT IGNORE INTO books(title, price, rating, img_url, upc, product_type, tax_price, no_tax_price, tax, availability, reviews) '
-                           'VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', row)
+            cursor.execute(
+                'INSERT IGNORE INTO books(title, price, rating, img_url, upc, product_type, tax_price, no_tax_price, tax, availability, reviews) '
+                'VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', row)
 
         books_db.commit()
         cursor.close()
